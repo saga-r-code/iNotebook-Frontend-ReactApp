@@ -3,7 +3,7 @@ import ContextNote from "../Context/notes/contextNote";
 
 const About = () => {
   // Access the context value which contains both `change` and `update`
-  const {change, update, val} = useContext(ContextNote); // Properly use context
+  const {change, update, val} = useContext(ContextNote); // using destructing get value
 
   //same as component mount 
   useEffect(() => {

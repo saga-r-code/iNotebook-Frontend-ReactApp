@@ -14,7 +14,6 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<About />} />
-
         </Routes>
       </Router>
       </NoteState>
