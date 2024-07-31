@@ -4,7 +4,7 @@ import ContextNote from "./contextNote";
 const NoteState = ({children}) => {
     const initialNote = [
         {
-          "_id": "66a4217dfe0a05c94e0ad90f",
+          "_id": "66a4217dfe0a05c94e0ad90f1",
           "user": "66a404eb5f82c89799e5bd19",
           "title": "Client",
           "description": "Nothing to print",
@@ -13,14 +13,66 @@ const NoteState = ({children}) => {
           "__v": 0
         },
         {
-          "_id": "66a913df69771cd5dec8545e",
+          "_id": "66a913df69771cd5dec8545e2",
           "user": "66a404eb5f82c89799e5bd19",
           "title": "My Notes",
           "description": "Nothing to print 2",
           "tag": "public 2",
           "date": "2024-07-30T16:25:03.213Z",
           "__v": 0
-        }
+        },
+        {
+          "_id": "66a4217dfe0a05c94e0ad90f3",
+          "user": "66a404eb5f82c89799e5bd19",
+          "title": "Client",
+          "description": "Nothing to print",
+          "tag": "public",
+          "date": "2024-07-26T22:21:49.439Z",
+          "__v": 0
+        },
+        {
+          "_id": "66a913df69771cd5dec8545e4",
+          "user": "66a404eb5f82c89799e5bd19",
+          "title": "My Notes",
+          "description": "Nothing to print 2",
+          "tag": "public 2",
+          "date": "2024-07-30T16:25:03.213Z",
+          "__v": 0
+        }, {
+          "_id": "66a4217dfe0a05c94e0ad90f5",
+          "user": "66a404eb5f82c89799e5bd19",
+          "title": "Client",
+          "description": "Nothing to print",
+          "tag": "public",
+          "date": "2024-07-26T22:21:49.439Z",
+          "__v": 0
+        },
+        {
+          "_id": "66a913df69771cd5dec8545e6",
+          "user": "66a404eb5f82c89799e5bd19",
+          "title": "My Notes",
+          "description": "Nothing to print 2",
+          "tag": "public 2",
+          "date": "2024-07-30T16:25:03.213Z",
+          "__v": 0
+        }, {
+          "_id": "66a4217dfe0a05c94e0ad90f7",
+          "user": "66a404eb5f82c89799e5bd19",
+          "title": "Client",
+          "description": "Nothing to print",
+          "tag": "public",
+          "date": "2024-07-26T22:21:49.439Z",
+          "__v": 0
+        },
+        {
+          "_id": "66a913df69771cd5dec8545e9",
+          "user": "66a404eb5f82c89799e5bd19",
+          "title": "My Notes",
+          "description": "Nothing to print 2",
+          "tag": "public 2",
+          "date": "2024-07-30T16:25:03.213Z",
+          "__v": 0
+        },
       ]
       
       const [notes, setnotes] = useState(initialNote)

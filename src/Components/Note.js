@@ -1,21 +1,21 @@
-import React, { useContext } from 'react'
-import ContextNote from '../Context/notes/contextNote' //import ContextNote to access NoteState
-import NotesItem from './NotesItem'
+import React, { useContext } from "react";
+import ContextNote from "../Context/notes/contextNote"; //import ContextNote to access NoteState
+import NotesItem from "./NotesItem";
 
 const Note = () => {
-    const NoteContextValue = useContext(ContextNote)
-    const {notes, setnotes} = NoteContextValue
+  const NoteContextValue = useContext(ContextNote);
+  const { notes, setnotes } = NoteContextValue;
 
   return (
-    <div>
-      <div className="notes my-10">
-          <h2 className="text-3xl font-bold">Your Notes</h2>
-          {notes.map((note)=>{
-            return <NotesItem note={note}/>
-          })}
-        </div>
+    <div className="flex flex-col  gap-8 justify-center items-center">
+      <h2 className="text-4xl font-bold">Your Notes</h2>
+      <div className="notes w-[80%] flex flex-wrap ">
+        {notes.map((note) => {
+          return <NotesItem note={note} key={note._id}/>;
+        })}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Note
+export default Note;

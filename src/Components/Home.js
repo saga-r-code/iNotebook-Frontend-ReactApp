@@ -38,10 +38,10 @@ const Home = () => {
             </div>
           </form>
 
-          <Note/>
+         
         </div>
       </div>
-
+      <Note/>
       
     </div>
   );
