@@ -1,5 +1,5 @@
 import React from "react";
-
+import { MdDeleteForever, MdEdit } from "react-icons/md";
 
 const NotesItem = ({ note }) => {
   return (
@@ -10,8 +10,19 @@ const NotesItem = ({ note }) => {
             {note.title}
           </h5>
           <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-            {note.description} 
+            {note.description}
           </p>
+
+          <div className="tool-section flex justify-end items-center gap-8 text-slate-200 font-bold mt-10">
+            <div className="delte flex gap-2 bg-red-500 py-2 px-3 rounded-full">
+              <p>Delete Note</p>
+              <MdDeleteForever size={24} />
+            </div>
+            <div className="edit flex gap-2 bg-green-500 py-2 px-3 rounded-full">
+              <p>Edit Note</p>
+              <MdEdit size={24} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

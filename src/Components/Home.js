@@ -37,8 +37,6 @@ const Home = () => {
               </button>
             </div>
           </form>
-
-         
         </div>
       </div>
       <Note/>

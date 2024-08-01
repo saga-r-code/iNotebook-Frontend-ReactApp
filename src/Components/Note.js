@@ -4,7 +4,7 @@ import NotesItem from "./NotesItem";
 
 const Note = () => {
   const NoteContextValue = useContext(ContextNote);
-  const { notes, setnotes } = NoteContextValue;
+  const { notes } = NoteContextValue;
 
   return (
     <div className="flex flex-col  gap-8 justify-center items-center">
