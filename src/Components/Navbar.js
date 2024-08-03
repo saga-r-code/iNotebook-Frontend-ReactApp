@@ -4,7 +4,7 @@ import { Link , useLocation} from "react-router-dom";
 const Navbar = () => {
   const location = useLocation(); //uselocation give the current details 
   useEffect(() => {
-    console.log(location.pathname) //current location print whenever it changes.
+    console.log( "path location: " + location.pathname) //current location print whenever it changes.
     // eslint-disable-next-line
   }, [location]);
   return (
