@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ContextNote from "../Context/notes/contextNote"; //import ContextNote to access NoteState
 import NotesItem from "./NotesItem";
 import AddNote from './AddNote'
 
 const Note = () => {
   const NoteContextValue = useContext(ContextNote);
-  const { notes } = NoteContextValue;
+  const { notes , getNotes} = NoteContextValue;
+  useEffect(() => {
+    getNotes()
+  }, [])
+  
 
   return (
     <>
