@@ -1,8 +1,9 @@
+const apiUrl = process.env.REACT_APP_BACKEND_URL;
 import { useState } from "react";
 import ContextNote from "./contextNote";
 
 const NoteState = ({ children }) => {
-  const host = "https://localhost:5000";
+  const host = apiUrl;
   const initialNote = []
   const [notes, setnotes] = useState(initialNote);
 
