@@ -14,6 +14,8 @@ const Navbar = () => {
         <div className="menu list-none flex gap-10 text-[17px]">
           <li><Link  to="/" className={`${location.pathname === "/" ? "text-white font-semibold" : ""}`}>Home</Link></li>
           <li><Link  to="/about" className={`${location.pathname === "/about" ? "text-white font-semibold" : ""}`}>About</Link></li>
+          <li><Link  to="/login" className={`${location.pathname === "/login" ? "text-white font-semibold" : ""}`}>Login</Link></li>
+          <li><Link  to="/signup" className={`${location.pathname === "/signup" ? "text-white font-semibold" : ""}`}>Sign Up</Link></li>
         </div>
       </div>
     </div>
