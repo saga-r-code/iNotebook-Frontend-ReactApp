@@ -17,6 +17,7 @@ const Login = () => {
         "Content-Type": "application/json",
         //   "auth-token":
         //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjZhNDA0ZWI1ZjgyYzg5Nzk5ZTViZDE5In0sImlhdCI6MTcyMjAyNTIxN30.xH6r4r_2Ie1EMg-tp6KMRN5z19HMjIEgB4jMR570U5E",
+        //when you login than you get token
       },
       body: JSON.stringify({ email: credentials.email, password : credentials.password}),
     });

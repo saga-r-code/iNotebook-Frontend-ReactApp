@@ -18,7 +18,7 @@ const NoteState = ({ children }) => {
         },
       });
       const json = await response.json();
-      console.log(json);
+      // console.log(json);
       setnotes(json); // Assuming the response is the list of notes
     } catch (error) {
       console.error("Error fetching notes:", error);
@@ -38,7 +38,7 @@ const NoteState = ({ children }) => {
         body: JSON.stringify({ title, description, tag }),
       });
       const json = await response.json();
-      console.log(json);
+      // console.log(json);
 
       // Add note on client
       const newNote = {
@@ -89,7 +89,7 @@ const NoteState = ({ children }) => {
         body: JSON.stringify({ title, description, tag }),
       });
       const json = await response.json();
-      console.log(json);
+      // console.log(json);
 
       // Update note on client
       const updatedNotes = notes.map((note) =>
