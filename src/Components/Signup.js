@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import ContextAlert from "../Context/alert/contextAlert";
+
 
 const Signup = () => {
+ const {alertMessage} = useContext(ContextAlert)
   const host = process.env.REACT_APP_BACKEND_URL;
   const [signupDetails, setsignupDetails] = useState({
     name: "",
@@ -17,7 +20,7 @@ const Signup = () => {
     const {name, email, password} = signupDetails
 
     if(signupDetails.password !== signupDetails.confirmPassword){
-      alert("please enter correct password")
+      alertMessage("please enter correct password")
       return
     }
     
@@ -37,9 +40,10 @@ const Signup = () => {
         //Save the auth token and redirect
         localStorage.setItem("token", json.authToken);
         navigateHistory("/")
+        alertMessage("Successfully Create Account")
     }
     else{
-        alert("Invalid Credentials");
+        alertMessage("Invalid Credentials");
     }
   };
 

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ContextAlert from "../Context/alert/contextAlert";
 
 const Login = () => {
+ const {alertMessage} = useContext(ContextAlert)
+ 
   const host = process.env.REACT_APP_BACKEND_URL;
   const [credentials, setCredentials] = useState({
     email: "",
@@ -11,6 +14,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const response = await fetch(`${host}/api/auth/login`, {
       method: "POST",
       headers: {
@@ -28,9 +32,10 @@ const Login = () => {
         //Save the auth token and redirect
         localStorage.setItem("token", json.authToken);
         navigateHistory("/")
+        alertMessage("Login Successfully")
     }
     else{
-        alert("Invalid Credentials");
+        alertMessage("Login Failed");
     }
   };
 
